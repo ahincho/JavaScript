@@ -1,0 +1,19 @@
+{
+  "name": "basic-testing-frontend",
+  "version": "1.0.0",
+  "description": "Basic Testing on Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run --reporter verbose",
+    "test:watch": "vitest",
+    "start": "http-server -c-1"
+  },
+  "author": "Angel Hincho",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "install": "^0.13.0",
+    "npm": "^10.8.2",
+    "vitest": "^2.0.3"
+  }
+}
