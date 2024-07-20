@@ -1,0 +1,19 @@
+{
+  "name": "basic-testing-nodejs-es-modules",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Basic Testing NodeJs Modules",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "Angel Hincho",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "vitest": "^2.0.3"
+  }
+}
