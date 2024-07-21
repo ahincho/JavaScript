@@ -1,44 +1,60 @@
-import { it, expect } from 'vitest';
+import { it, expect, beforeEach, beforeAll, afterAll, afterEach, describe } from 'vitest';
 import { User } from './hooks';
 
 const testEmail = 'test@test.com';
-const user = new User(testEmail);
+let user = new User(testEmail);
 
-it('should update the email', () => {
-  // Arrange
-  const newTestEmail = 'test2@test.com';
-  // Act
-  user.updateEmail(newTestEmail);
-  // Assert
-  expect(user.email).toBe(newTestEmail);
+beforeAll(() => {
+  console.log('Before All Function');
 });
 
-it('should have an email property', () => {
-  // Arrange
-  // Act
-  // Assert
-  expect(user).toHaveProperty('email');
+beforeEach(() => {
+  user = new User(testEmail);
+  console.log('Before Each Function');
 });
 
-it('should store the provided email value', () => {
-  // Arrange
-  // Act
-  // Assert
-  expect(user.email).toBe(testEmail);
+afterAll(() => {
+  console.log('After All Function');
 });
 
-it('should clear the email', () => {
-  // Arrange
-  // Act
-  user.clearEmail();
-  // Assert
-  expect(user.email).toBe('');
+afterEach(() => {
+  console.log('After Each Function');
 });
 
-it('should still have an email property after clearing the email', () => {
-  // Arrange
-  // Act
-  user.clearEmail();
-  // Assert
-  expect(user).toHaveProperty('email');
-});
+describe.concurrent('User', () => {
+  it('should update the email', () => {
+    // Arrange
+    const newTestEmail = 'test2@test.com';
+    // Act
+    user.updateEmail(newTestEmail);
+    // Assert
+    expect(user.email).toBe(newTestEmail);
+  });
+  it('should have an email property', () => {
+    // Arrange
+    // Act
+    // Assert
+    expect(user).toHaveProperty('email');
+  });
+  it('should store the provided email value', () => {
+    // Arrange
+    // Act
+    user = new User(testEmail);
+    // Assert
+    expect(user.email).toBe(testEmail);
+  });
+  it('should clear the email', () => {
+    // Arrange
+    // Act
+    user.clearEmail();
+    // Assert
+    expect(user.email).toBe('');
+  });
+  it('should still have an email property after clearing the email', () => {
+    // Arrange
+    // Act
+    user.clearEmail();
+    // Assert
+    expect(user).toHaveProperty('email');
+  });
+})
