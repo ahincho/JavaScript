@@ -4,7 +4,8 @@
   "description": "Basic Testing in NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest --run --reporter verbose",
+    "test:watch": "vitest"
   },
   "author": "Angel Hincho",
   "license": "ISC",
