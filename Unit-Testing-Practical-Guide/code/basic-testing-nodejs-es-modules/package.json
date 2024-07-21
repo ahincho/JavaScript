@@ -5,7 +5,8 @@
   "description": "Basic Testing NodeJs Modules",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest --run --reporter verbose",
+    "test:watch": "vitest"
   },
   "author": "Angel Hincho",
   "license": "ISC",
