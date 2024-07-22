@@ -1,0 +1,18 @@
+{
+  "name": "mocking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1",
+    "test": "vitest --run --environment happy-dom"
+  },
+  "author": "Angel Hincho",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "happy-dom": "^14.12.3",
+    "vitest": "^2.0.3"
+  }
+}

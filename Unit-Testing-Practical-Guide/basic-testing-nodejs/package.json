@@ -1,0 +1,16 @@
+{
+  "name": "basic-testing-nodejs",
+  "version": "1.0.0",
+  "description": "Basic Testing in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run --reporter verbose",
+    "test:watch": "vitest"
+  },
+  "author": "Angel Hincho",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "vitest": "^2.0.3"
+  }
+}
